@@ -1,0 +1,6 @@
+{
+  "outlet_temp_C": {"upper": 85, "metric": "value"},
+  "pressure_bar": {"lower": 2.0, "upper": 3.5, "metric": "value"},
+  "flow_rate_kg_s": {"lower": 0.8, "metric": "value"},
+  "accel_pump_g": {"upper": 0.35, "metric": "rms"}
+}

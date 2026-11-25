@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eda-assistant"
+version = "0.1.0"
+description = "Analyze engineering test data, check acceptance criteria, generate PDF reports and ask questions in plain language with Claude."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "anthropic>=2.13",
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "scikit-learn",
+    "reportlab",
+    "streamlit",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+eda = "eda_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
